@@ -36,7 +36,8 @@ public class StreetServiceImpl implements StreetsService {
 
     @Override
     @Transactional(readOnly = true)
-    public StreetInfo getStreetInfo(String streetId) {
+    public StreetInfo getStreetInfo(String streetId)
+    {
 
         Street street = streetRepository.findById(streetId).orElseThrow();
         StreetInfo streetInfo = new StreetInfo();
